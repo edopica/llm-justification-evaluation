@@ -20,7 +20,7 @@ Output Format Requirements:
 
         ## Solution Section: This section must contain **only** the correct multiple‑choice letter in uppercase, matching exactly:
 
-            STRICT ADHERENCE TOO: \n## Solution\n[ABCD] 
+            STRICT ADHERENCE TO: \n## Solution\n[ABCD] 
 
             - No additional text, spaces, or lines before or after.
             - Letter must be one of A, B, C, or D.

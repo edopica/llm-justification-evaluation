@@ -31,7 +31,7 @@ conda activate nlp_env
 # Start Ollama server in background (once)
 ollama serve > ollama_server.log 2>&1 &
 sleep 10
-
+echo "ollama served"
 # Loop through each model in models.txt
 while IFS= read -r model; do
     echo "=== Model: $model ==="
@@ -42,13 +42,13 @@ while IFS= read -r model; do
     # Run your generator script
     python scripts/math_answer_generator.py \
         --model "$model" \
-        --range 0:4
+        --range 1737:1799
 
     # Remove the model to free up space
     ollama rm "$model"
 
     echo "-----------------------------"
-done < models.txt
+done < models1.txt
 
 # Clean up
 conda deactivate

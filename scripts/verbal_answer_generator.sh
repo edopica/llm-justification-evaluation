@@ -5,7 +5,7 @@
 #SBATCH --partition=dsba
 #SBATCH --cpus-per-task=4
 #SBATCH --mem=8G
-#SBATCH --gres=gpu:1
+#SBATCH --gres=gpu:2
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=3321908@studbocconi.it
 
@@ -40,15 +40,15 @@ while IFS= read -r model; do
     ollama pull "$model"
 
     # Run your generator script
-    python scripts/verbal_answer_generator.py \
+    python scripts/verbal_answer_generator_1.py \
         --model "$model" \
-        --range 0:1
+        --range 0:331
 
     # Remove the model to free up space
     ollama rm "$model"
 
     echo "-----------------------------"
-done < models.txt
+done < models1.txt
 
 # Clean up
 conda deactivate

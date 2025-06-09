@@ -82,7 +82,7 @@ def main():
 
     # Define paths relative to the project root
     prompt_file_path = os.path.join(project_root, "data", "prompts", "math_question_prompt.txt")
-    input_csv_path = os.path.join(project_root, "data", "datasets", "math_questions_pool.csv")
+    input_csv_path = os.path.join(project_root, "data", "datasets", "math_questions_pool_1.csv")
     output_csv_path = os.path.join(project_root, "data", "generated_data", "math_answers.csv")
     
     # Define the header for the output CSV file
